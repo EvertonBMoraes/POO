@@ -18,9 +18,7 @@ public class Cantor {
         this.numeroRegistro = numeroRegistro;
     }
 
-    public String mudarNomeArtistico(){
-        this.getNomeArtistico();
-        return null;
+    public void mudarNomeArtistico(){
     }
 
     public String getNomeReal() {

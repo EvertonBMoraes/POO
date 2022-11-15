@@ -10,19 +10,65 @@ public class Album {
     private Integer qtdFaixas;
     private String[] musicas;
     private String  cantor;
-    private SimpleDateFormat tempoDuracao;
 
-    public Album(Integer idAlbum, String nomeAlbum, Data dataLancamento, Integer qtdFaixas, String[] musicas, String cantor, SimpleDateFormat tempoDuracao) {
+    public Album(Integer idAlbum, String nomeAlbum, Data dataLancamento, Integer qtdFaixas, String[] musicas, String cantor) {
         this.idAlbum = idAlbum;
         this.nomeAlbum = nomeAlbum;
         this.dataLancamento = dataLancamento;
         this.qtdFaixas = qtdFaixas;
         this.musicas = musicas;
         this.cantor = cantor;
-        this.tempoDuracao = tempoDuracao;
     }
 
-    public String listaMusuca(int id){
+    public String listaMusicas(int id){
         return null;
+    }
+
+    public Integer getIdAlbum() {
+        return idAlbum;
+    }
+
+    public void setIdAlbum(Integer idAlbum) {
+        this.idAlbum = idAlbum;
+    }
+
+    public String getNomeAlbum() {
+        return nomeAlbum;
+    }
+
+    public void setNomeAlbum(String nomeAlbum) {
+        this.nomeAlbum = nomeAlbum;
+    }
+
+    public Data getDataLancamento() {
+        return dataLancamento;
+    }
+
+    public void setDataLancamento(Data dataLancamento) {
+        this.dataLancamento = dataLancamento;
+    }
+
+    public Integer getQtdFaixas() {
+        return qtdFaixas;
+    }
+
+    public void setQtdFaixas(Integer qtdFaixas) {
+        this.qtdFaixas = qtdFaixas;
+    }
+
+    public String[] getMusicas() {
+        return musicas;
+    }
+
+    public void setMusicas(String[] musicas) {
+        this.musicas = musicas;
+    }
+
+    public String getCantor() {
+        return cantor;
+    }
+
+    public void setCantor(String cantor) {
+        this.cantor = cantor;
     }
 }
