@@ -6,11 +6,11 @@ public class Cantor {
 
     private String nomeReal;
     private String nomeArtistico;
-    private Date dataNascimeto;
+    private String dataNascimeto;
     private String descricao;
     private Integer numeroRegistro;
 
-    public Cantor(String nomeReal, String nomeArtistico, Date dataNascimeto, String descricao, Integer numeroRegistro) {
+    public Cantor(String nomeReal, String nomeArtistico, String dataNascimeto, String descricao, Integer numeroRegistro) {
         this.nomeReal = nomeReal;
         this.nomeArtistico = nomeArtistico;
         this.dataNascimeto = dataNascimeto;
@@ -37,11 +37,11 @@ public class Cantor {
         this.nomeArtistico = nomeArtistico;
     }
 
-    public Date getDataNascimeto() {
+    public String getDataNascimeto() {
         return dataNascimeto;
     }
 
-    public void setDataNascimeto(Date dataNascimeto) {
+    public void setDataNascimeto(String dataNascimeto) {
         this.dataNascimeto = dataNascimeto;
     }
 

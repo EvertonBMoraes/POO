@@ -15,8 +15,8 @@ public class Filme {
 
     public void exibirMusicaFilme(String nome){
         if (nome.equals(getNome())) {
-
-            System.out.println("Nome da Musica é: " + getNomeMusica());
+            System.out.println("__________________________");
+            System.out.println("No filme "+ this.nome +" é tocada a música " + getNomeMusica());
         }
     }
 
@@ -48,16 +48,4 @@ public class Filme {
         return nomeMusica;
     }
 
-    public void setNomeMusica(String nomeMusica) {
-        this.nomeMusica = nomeMusica;
-    }
-
-    public void info(){
-        System.out.println("__________________________");
-        System.out.printf("Nome....................:%s%n",this.nome);
-        System.out.printf("Genero..................:%s%n",this.genero);
-        System.out.printf("Ano de lançamento.......:%s%n",this.anoLancamento);
-        System.out.printf("Musica..................:%s%n",this.nomeMusica);
-
-    }
 }

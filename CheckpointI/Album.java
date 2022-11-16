@@ -68,11 +68,11 @@ public class Album {
 
     public String info(){
         System.out.println("__________________________");
-        System.out.printf("Nome....................:%s%n",this.idAlbum);
-        System.out.printf("Genero..................:%s%n",this.nomeAlbum);
-        System.out.printf("Ano de lançamento.......:%s%n",getDataLancamento());
-        System.out.printf("Musica..................:%s%n",this.cantor);
+        System.out.println("--Info. sobre o álbum id:"+ this.idAlbum + "--");
+        System.out.printf("Nome..................:%s%n",this.nomeAlbum);
+        System.out.printf("Quantidade de faixas..:%s%n",this.qtdFaixas);
+        System.out.printf("Cantor................:%s%n",this.cantor);
 
-        return "Esse é o album foi criado em: " + getDataLancamento();
+        return "Esse album foi lançado em: " + getDataLancamento();
     }
 }
