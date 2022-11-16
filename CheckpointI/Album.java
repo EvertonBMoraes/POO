@@ -1,29 +1,27 @@
 package CheckpointI;
 
 import javax.xml.crypto.Data;
-import java.text.SimpleDateFormat;
 
 public class Album {
     private Integer idAlbum;
     private String nomeAlbum;
-    private Data dataLancamento;
+    private String dataLancamento;
     private Integer qtdFaixas;
-    private String[] musicas;
-    private String  cantor;
+    private String cantor;
 
-    public Album(Integer idAlbum, String nomeAlbum, Data dataLancamento, Integer qtdFaixas, String[] musicas, String cantor) {
+    public Album(Integer idAlbum, String nomeAlbum, String dataLancamento, Integer qtdFaixas, String cantor) {
         this.idAlbum = idAlbum;
         this.nomeAlbum = nomeAlbum;
         this.dataLancamento = dataLancamento;
         this.qtdFaixas = qtdFaixas;
-        this.musicas = musicas;
         this.cantor = cantor;
     }
 
-    public String listaMusicas(int id){
-        return null;
+    public void exibirAlbum(Integer idAlbum){
+        if (idAlbum.equals(getIdAlbum())) {
+            System.out.println(info());
+        }
     }
-
     public Integer getIdAlbum() {
         return idAlbum;
     }
@@ -40,11 +38,15 @@ public class Album {
         this.nomeAlbum = nomeAlbum;
     }
 
-    public Data getDataLancamento() {
+    public String getDataLancamento() {
+//       Date date = new Date();
+//        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+//        String today = formatter.format(date);
+//        System.out.println("Today : " + today);
         return dataLancamento;
     }
 
-    public void setDataLancamento(Data dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
@@ -56,19 +58,21 @@ public class Album {
         this.qtdFaixas = qtdFaixas;
     }
 
-    public String[] getMusicas() {
-        return musicas;
-    }
-
-    public void setMusicas(String[] musicas) {
-        this.musicas = musicas;
-    }
-
     public String getCantor() {
         return cantor;
     }
 
     public void setCantor(String cantor) {
         this.cantor = cantor;
+    }
+
+    public String info(){
+        System.out.println("__________________________");
+        System.out.printf("Nome....................:%s%n",this.idAlbum);
+        System.out.printf("Genero..................:%s%n",this.nomeAlbum);
+        System.out.printf("Ano de lançamento.......:%s%n",getDataLancamento());
+        System.out.printf("Musica..................:%s%n",this.cantor);
+
+        return "Esse é o album foi criado em: " + getDataLancamento();
     }
 }

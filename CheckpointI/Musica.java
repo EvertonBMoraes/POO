@@ -1,6 +1,5 @@
 package CheckpointI;
 
-import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
@@ -10,22 +9,35 @@ public class Musica {
     private String nomeMusica;
     private String generoMusica;
     private String cantor;
-
     private Long tempo;
     private Duration tempoDuracao;
     private Double nota;
 
-    public Musica(Integer idMusica, String nomeMusica, String generoMusica, String cantor,Long tempo ,Duration tempoDuracao, Double nota) {
+
+    public Musica(Integer idMusica, String nomeMusica, String generoMusica, String cantor, Long tempo, Double nota) {
         this.idMusica = idMusica;
         this.nomeMusica = nomeMusica;
         this.generoMusica = generoMusica;
         this.cantor = cantor;
         this.tempo = tempo;
-        this.tempoDuracao = tempoDuracao;
+
         this.nota = nota;
     }
 
 
+
+    public Long getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(Long tempo) {
+        this.tempo = tempo;
+    }
+
+    public Musica(Musica listaMusica) {
+        listaMusica = new Musica(this.idMusica,this.nomeMusica,this.generoMusica,this.cantor,this.tempo,this.nota);
+        System.out.println(listaMusica);
+    }
 
     public void modificarNota(){
 
@@ -61,14 +73,6 @@ public class Musica {
 
     public void setCantor(String cantor) {
         this.cantor = cantor;
-    }
-
-    public Long getTempo() {
-        return tempo;
-    }
-
-    public void setTempo(Long tempo) {
-        this.tempo = tempo;
     }
 
     public String getTempoDuracao() {
