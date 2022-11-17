@@ -41,11 +41,11 @@ public class Musica {
     public void info(){
         System.out.println("____________________________");
         System.out.println("--Info. sobre música--");
-        System.out.printf("Id............:%s%n",this.idMusica);
+        System.out.printf("Id..............:%s%n",this.idMusica);
         System.out.printf("Nome............:%s%n",this.nomeMusica);
-        System.out.printf("Genero............:%s%n",this.generoMusica);
-        System.out.printf("Cantor............:%s%n",this.cantor);
-        System.out.printf("Duração............:%s%n",getTempoDuracao());
+        System.out.printf("Genero..........:%s%n",this.generoMusica);
+        System.out.printf("Cantor..........:%s%n",this.cantor);
+        System.out.printf("Duração.........:%s%n",getTempoDuracao());
         System.out.printf("Nota............:%s%n",this.nota);
     }
 

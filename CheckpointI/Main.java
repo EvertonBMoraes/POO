@@ -1,6 +1,12 @@
 package CheckpointI;
 public class Main {
     public static void main(String[] args) {
+
+        //Devs Everton Moraes e Henrique Schneider
+        System.out.println("____________________________\n" +
+                "Programação Orientada a Objetos - Checkpoint I\n" +
+                "Por Everton Moraes e Henrique Schneider");
+
         Musica track01 = new Musica(10001,"Wanna Be Starlin'Somethin'","Pop","Michael Jackson",360L,7.9);
         Musica track02 = new Musica(10002,"Baby Be Mine","Pop","Michael Jackson",260L,8.8);
         Musica track03 = new Musica(10003,"The Girl Is Mine","Pop","Michael Jackson",220L,8.5);
@@ -41,5 +47,7 @@ public class Main {
         disco02.exibirAlbum();
 
         pelicula02.exibirMusicaFilme();
+
+        System.out.println("____________________________");
     }
 }

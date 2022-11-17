@@ -14,7 +14,7 @@ public class Filme {
     }
 
     public void exibirMusicaFilme(){
-            System.out.println("__________________________");
+            System.out.println("____________________________");
             System.out.println("No filme "+ this.nome +" é tocada a música " + this.nomeMusica);
     }
 

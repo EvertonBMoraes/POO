@@ -23,11 +23,11 @@ public class Album {
     public String info(){
         System.out.println("____________________________");
         System.out.println("--Info. sobre o álbum id:"+ this.idAlbum + "--");
-        System.out.printf("Nome..................:%s%n",this.nomeAlbum);
-        System.out.printf("Quantidade de faixas..:%s%n",this.qtdFaixas);
-        System.out.printf("Cantor................:%s%n",this.cantor);
+        System.out.printf("Nome............:%s%n",this.nomeAlbum);
+        System.out.printf("Qtd de faixas...:%s%n",this.qtdFaixas);
+        System.out.printf("Cantor..........:%s%n",this.cantor);
 
-        return "Esse album foi lançado em: " + getDataLancamento();
+        return "Esse album foi lançado em " + getDataLancamento();
     }
 
     public String getDataLancamento() {
