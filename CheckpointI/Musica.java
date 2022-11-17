@@ -20,18 +20,7 @@ public class Musica {
         this.generoMusica = generoMusica;
         this.cantor = cantor;
         this.tempo = tempo;
-
         this.nota = nota;
-    }
-
-
-
-    public Long getTempo() {
-        return tempo;
-    }
-
-    public void setTempo(Long tempo) {
-        this.tempo = tempo;
     }
 
     public Musica(Musica listaMusica) {
@@ -39,9 +28,44 @@ public class Musica {
         System.out.println(listaMusica);
     }
 
-    public void modificarNota(){
-
+    public void modificarNota(Double nota){
+        System.out.println(
+                "____________________________\n" +
+                    "Música " + this.nomeMusica +
+                        "\nNota anterior: " + this.getNota());
+        this.nota = nota;
+        System.out.println("Nova nota atribuída: "
+                + this.getNota());
     };
+
+    public void info(){
+        System.out.println("____________________________");
+        System.out.println("--Info. sobre música--");
+        System.out.printf("Id............:%s%n",this.idMusica);
+        System.out.printf("Nome............:%s%n",this.nomeMusica);
+        System.out.printf("Genero............:%s%n",this.generoMusica);
+        System.out.printf("Cantor............:%s%n",this.cantor);
+        System.out.printf("Duração............:%s%n",getTempoDuracao());
+        System.out.printf("Nota............:%s%n",this.nota);
+    }
+
+    public String getTempoDuracao() {
+
+        tempoDuracao = Duration.ofSeconds(getTempo());
+        long dias = tempoDuracao.toDays();
+        Duration d2 = tempoDuracao.minus(dias, ChronoUnit.DAYS);
+        long horas = d2.toHours();
+        Duration d3 = d2.minus(horas, ChronoUnit.HOURS);
+        long minutos = d3.toMinutes();
+        Duration d4 = d3.minus(minutos, ChronoUnit.MINUTES);
+        long segundos = d4.getSeconds();
+        Duration d5 = d4.minus(segundos, ChronoUnit.SECONDS);
+        long nanos = d5.toNanos();
+        Duration d6 = d5.minus(nanos, ChronoUnit.NANOS);
+        if (!d6.isZero()) throw new AssertionError(d6.toString());
+
+        return String.format("%dh:%02dm:%02ds",horas,minutos,segundos);
+    }
 
     public Integer getIdMusica() {
         return idMusica;
@@ -75,24 +99,12 @@ public class Musica {
         this.cantor = cantor;
     }
 
-    public String getTempoDuracao() {
+    public Long getTempo() {
+        return tempo;
+    }
 
-        tempoDuracao = Duration.ofSeconds(getTempo());
-        long dias = tempoDuracao.toDays();
-        Duration d2 = tempoDuracao.minus(dias, ChronoUnit.DAYS);
-        long horas = d2.toHours();
-        Duration d3 = d2.minus(horas, ChronoUnit.HOURS);
-        long minutos = d3.toMinutes();
-        Duration d4 = d3.minus(minutos, ChronoUnit.MINUTES);
-        long segundos = d4.getSeconds();
-        Duration d5 = d4.minus(segundos, ChronoUnit.SECONDS);
-        long nanos = d5.toNanos();
-        Duration d6 = d5.minus(nanos, ChronoUnit.NANOS);
-        if (!d6.isZero()) throw new AssertionError(d6.toString());
-        //        System.out.printf("Duração............:%s%n",horas + " horas, " + minutos + " minutos, " + segundos + " segundos.");
-//        System.out.println("Resultado: " + tempoDuracao);
-
-        return String.format("%dH:%02dm:%02ds",horas,minutos,segundos);
+    public void setTempo(Long tempo) {
+        this.tempo = tempo;
     }
 
     public void setTempoDuracao(Duration tempoDuracao) {
@@ -105,16 +117,5 @@ public class Musica {
 
     public void setNota(Double nota) {
         this.nota = nota;
-    }
-
-    public void info(){
-        System.out.println("____________________________");
-        System.out.println("--Info. sobre música--");
-        System.out.printf("Id............:%s%n",this.idMusica);
-        System.out.printf("Nome............:%s%n",this.nomeMusica);
-        System.out.printf("Genero............:%s%n",this.generoMusica);
-        System.out.printf("Cantor............:%s%n",this.cantor);
-        System.out.printf("Duração............:%s%n",getTempoDuracao());
-        System.out.printf("Nota............:%s%n",this.nota);
     }
 }

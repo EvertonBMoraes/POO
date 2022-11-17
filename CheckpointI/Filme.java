@@ -13,11 +13,9 @@ public class Filme {
         this.nomeMusica = nomeMusica;
     }
 
-    public void exibirMusicaFilme(String nome){
-        if (nome.equals(getNome())) {
+    public void exibirMusicaFilme(){
             System.out.println("__________________________");
-            System.out.println("No filme "+ this.nome +" é tocada a música " + getNomeMusica());
-        }
+            System.out.println("No filme "+ this.nome +" é tocada a música " + this.nomeMusica);
     }
 
     public String getNome() {
@@ -48,4 +46,7 @@ public class Filme {
         return nomeMusica;
     }
 
+    public void setNomeMusica(String nomeMusica) {
+        this.nomeMusica = nomeMusica;
+    }
 }

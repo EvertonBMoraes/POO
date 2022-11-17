@@ -16,11 +16,26 @@ public class Album {
         this.qtdFaixas = qtdFaixas;
         this.cantor = cantor;
     }
-
-    public void exibirAlbum(Integer idAlbum){
-        if (idAlbum.equals(getIdAlbum())) {
+    public void exibirAlbum(){
             System.out.println(info());
-        }
+    }
+
+    public String info(){
+        System.out.println("____________________________");
+        System.out.println("--Info. sobre o álbum id:"+ this.idAlbum + "--");
+        System.out.printf("Nome..................:%s%n",this.nomeAlbum);
+        System.out.printf("Quantidade de faixas..:%s%n",this.qtdFaixas);
+        System.out.printf("Cantor................:%s%n",this.cantor);
+
+        return "Esse album foi lançado em: " + getDataLancamento();
+    }
+
+    public String getDataLancamento() {
+//       Date date = new Date();
+//        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+//        String today = formatter.format(date);
+//        System.out.println("Today : " + today);
+        return dataLancamento;
     }
     public Integer getIdAlbum() {
         return idAlbum;
@@ -36,14 +51,6 @@ public class Album {
 
     public void setNomeAlbum(String nomeAlbum) {
         this.nomeAlbum = nomeAlbum;
-    }
-
-    public String getDataLancamento() {
-//       Date date = new Date();
-//        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-//        String today = formatter.format(date);
-//        System.out.println("Today : " + today);
-        return dataLancamento;
     }
 
     public void setDataLancamento(String dataLancamento) {
@@ -64,15 +71,5 @@ public class Album {
 
     public void setCantor(String cantor) {
         this.cantor = cantor;
-    }
-
-    public String info(){
-        System.out.println("__________________________");
-        System.out.println("--Info. sobre o álbum id:"+ this.idAlbum + "--");
-        System.out.printf("Nome..................:%s%n",this.nomeAlbum);
-        System.out.printf("Quantidade de faixas..:%s%n",this.qtdFaixas);
-        System.out.printf("Cantor................:%s%n",this.cantor);
-
-        return "Esse album foi lançado em: " + getDataLancamento();
     }
 }
