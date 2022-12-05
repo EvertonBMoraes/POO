@@ -1,4 +1,4 @@
-package CheckpointI;
+package CheckpointII;
 
 public class Album {
     private Integer idAlbum;
