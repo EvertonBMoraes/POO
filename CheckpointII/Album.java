@@ -1,13 +1,15 @@
 package CheckpointII;
 
+import java.time.LocalDate;
+
 public class Album {
     private Integer idAlbum;
     private String nomeAlbum;
-    private String dataLancamento;
+    private LocalDate dataLancamento;
     private Integer qtdFaixas;
     private String cantor;
 
-    public Album(Integer idAlbum, String nomeAlbum, String dataLancamento, Integer qtdFaixas, String cantor) {
+    public Album(Integer idAlbum, String nomeAlbum, LocalDate dataLancamento, Integer qtdFaixas, String cantor) {
         this.idAlbum = idAlbum;
         this.nomeAlbum = nomeAlbum;
         this.dataLancamento = dataLancamento;
@@ -25,16 +27,9 @@ public class Album {
         System.out.printf("Qtd de faixas...:%s%n",this.qtdFaixas);
         System.out.printf("Cantor..........:%s%n",this.cantor);
 
-        return "Esse album foi lançado em " + getDataLancamento();
+        return "Esse album foi lançado em " + this.dataLancamento;
     }
 
-    public String getDataLancamento() {
-//       Date date = new Date();
-//        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-//        String today = formatter.format(date);
-//        System.out.println("Today : " + today);
-        return dataLancamento;
-    }
     public Integer getIdAlbum() {
         return idAlbum;
     }
@@ -51,7 +46,11 @@ public class Album {
         this.nomeAlbum = nomeAlbum;
     }
 
-    public void setDataLancamento(String dataLancamento) {
+    public LocalDate getDataLancamento() {
+        return dataLancamento;
+    }
+
+    public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

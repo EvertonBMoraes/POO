@@ -1,14 +1,16 @@
 package CheckpointII;
 
+import java.time.LocalDate;
+
 public class Cantor {
 
     private String nomeReal;
     private String nomeArtistico;
-    private String dataNascimeto;
+    private LocalDate dataNascimeto;
     private String descricao;
     private Integer numeroRegistro;
 
-    public Cantor(String nomeReal, String nomeArtistico, String dataNascimeto, String descricao, Integer numeroRegistro) {
+    public Cantor(String nomeReal, String nomeArtistico, LocalDate dataNascimeto, String descricao, Integer numeroRegistro) {
         this.nomeReal = nomeReal;
         this.nomeArtistico = nomeArtistico;
         this.dataNascimeto = dataNascimeto;
@@ -41,11 +43,11 @@ public class Cantor {
         this.nomeArtistico = nomeArtistico;
     }
 
-    public String getDataNascimeto() {
+    public LocalDate getDataNascimeto() {
         return dataNascimeto;
     }
 
-    public void setDataNascimeto(String dataNascimeto) {
+    public void setDataNascimeto(LocalDate dataNascimeto) {
         this.dataNascimeto = dataNascimeto;
     }
 

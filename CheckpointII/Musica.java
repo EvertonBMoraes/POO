@@ -1,6 +1,7 @@
 package CheckpointII;
 
 import java.time.Duration;
+import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
 public class Musica {
@@ -9,12 +10,12 @@ public class Musica {
     private String nomeMusica;
     private String generoMusica;
     private String cantor;
-    private Long tempo;
-    private Duration tempoDuracao;
+    private LocalTime tempo;
+
     private Double nota;
 
 
-    public Musica(Integer idMusica, String nomeMusica, String generoMusica, String cantor, Long tempo, Double nota) {
+    public Musica(Integer idMusica, String nomeMusica, String generoMusica, String cantor, LocalTime tempo, Double nota) {
         this.idMusica = idMusica;
         this.nomeMusica = nomeMusica;
         this.generoMusica = generoMusica;
@@ -45,26 +46,8 @@ public class Musica {
         System.out.printf("Nome............:%s%n",this.nomeMusica);
         System.out.printf("Genero..........:%s%n",this.generoMusica);
         System.out.printf("Cantor..........:%s%n",this.cantor);
-        System.out.printf("Duração.........:%s%n",getTempoDuracao());
+        System.out.printf("Duração.........:%s%n",this.tempo);
         System.out.printf("Nota............:%s%n",this.nota);
-    }
-
-    public String getTempoDuracao() {
-
-        tempoDuracao = Duration.ofSeconds(getTempo());
-        long dias = tempoDuracao.toDays();
-        Duration d2 = tempoDuracao.minus(dias, ChronoUnit.DAYS);
-        long horas = d2.toHours();
-        Duration d3 = d2.minus(horas, ChronoUnit.HOURS);
-        long minutos = d3.toMinutes();
-        Duration d4 = d3.minus(minutos, ChronoUnit.MINUTES);
-        long segundos = d4.getSeconds();
-        Duration d5 = d4.minus(segundos, ChronoUnit.SECONDS);
-        long nanos = d5.toNanos();
-        Duration d6 = d5.minus(nanos, ChronoUnit.NANOS);
-        if (!d6.isZero()) throw new AssertionError(d6.toString());
-
-        return String.format("%dh:%02dm:%02ds",horas,minutos,segundos);
     }
 
     public Integer getIdMusica() {
@@ -99,16 +82,12 @@ public class Musica {
         this.cantor = cantor;
     }
 
-    public Long getTempo() {
+    public LocalTime getTempo() {
         return tempo;
     }
 
-    public void setTempo(Long tempo) {
+    public void setTempo(LocalTime tempo) {
         this.tempo = tempo;
-    }
-
-    public void setTempoDuracao(Duration tempoDuracao) {
-        this.tempoDuracao = tempoDuracao;
     }
 
     public Double getNota() {
