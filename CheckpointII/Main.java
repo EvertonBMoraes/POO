@@ -45,9 +45,9 @@ public class Main {
         Cantor artista02 = new Cantor("Abel Makkonen Tesfaye", "The Weeknd",LocalDate.of(1990,2,16),"Abel Makkonen Tesfaye, mais conhecido por seu nome artístico the Weeknd, é um cantor, compositor, ator e produtor musical canadense. Ele ajudou a expandir a paleta musical do R&B, ao incorporar influências indie e de música eletrônica; seu trabalho é classificado como R&B alternativo.",10002);
         Cantor artista03 = new Cantor("Peter Gene Hernandez", "Bruno Mars",LocalDate.of(1985,10,8),"Peter Gene Hernandez, mais conhecido pelo nome artístico Bruno Mars é um cantor, compositor, produtor musical, dançarino e multi-instrumentista americano, nascido e criado no Havaí. ",10003);
 
-        Album disco01 = new Album(10001,"Thriller",LocalDate.of(1982,11,30),9,"Michael Jackson");
-        Album disco02 = new Album(10002,"After Hours",LocalDate.of(2020,03,20),14,"The Weeknd");
-        Album disco03 = new Album(10003,"24K Magic",LocalDate.of(2016,11,17),9,"Bruno Mars");
+        Album disco01 = new Album(10001,"Thriller", "Michael Jackson","Pop",LocalDate.of(1982,11,30),9,);
+        Album disco02 = new Album(10002,"After Hours", "The Weeknd","R&B",LocalDate.of(2020,03,20),14,);
+        Album disco03 = new Album(10003,"24K Magic","Bruno Mars","Pop",LocalDate.of(2016,11,17),9,);
 
         Filme pelicula01 = new Filme("MoonWalker",1988,"Musical","Bad");
         Filme pelicula02 = new Filme("O Guarda Costas",1992,"Drama Romântico","I Will Always love You");
@@ -63,7 +63,7 @@ public class Main {
 
         artista01.mudarNomeArtistico("MJ");
 
-        disco02.exibirAlbum();
+        disco02.info();
 
         pelicula02.exibirMusicaFilme();
 

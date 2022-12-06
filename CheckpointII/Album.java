@@ -1,49 +1,26 @@
 package CheckpointII;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
-public class Album {
-    private Integer idAlbum;
-    private String nomeAlbum;
+public class Album extends Cadastro{
     private LocalDate dataLancamento;
     private Integer qtdFaixas;
-    private String cantor;
 
-    public Album(Integer idAlbum, String nomeAlbum, LocalDate dataLancamento, Integer qtdFaixas, String cantor) {
-        this.idAlbum = idAlbum;
-        this.nomeAlbum = nomeAlbum;
+    public Album(Integer id, String nome, String cantor, String genero, LocalTime tempo, Double nota, LocalDate dataLancamento, Integer qtdFaixas) {
+        super(id, nome, cantor, genero, tempo, nota);
         this.dataLancamento = dataLancamento;
         this.qtdFaixas = qtdFaixas;
-        this.cantor = cantor;
-    }
-    public void exibirAlbum(){
-            System.out.println(info());
     }
 
-    public String info(){
+    @Override
+    public void info(){
         System.out.println("____________________________");
-        System.out.println("--Info. sobre o álbum id:"+ this.idAlbum + "--");
-        System.out.printf("Nome............:%s%n",this.nomeAlbum);
+        System.out.println("--Info. sobre o álbum id:"+ this.getId() + "--");
+        System.out.printf("Nome............:%s%n",this.getNome());
         System.out.printf("Qtd de faixas...:%s%n",this.qtdFaixas);
-        System.out.printf("Cantor..........:%s%n",this.cantor);
-
-        return "Esse album foi lançado em " + this.dataLancamento;
-    }
-
-    public Integer getIdAlbum() {
-        return idAlbum;
-    }
-
-    public void setIdAlbum(Integer idAlbum) {
-        this.idAlbum = idAlbum;
-    }
-
-    public String getNomeAlbum() {
-        return nomeAlbum;
-    }
-
-    public void setNomeAlbum(String nomeAlbum) {
-        this.nomeAlbum = nomeAlbum;
+        System.out.printf("Cantor..........:%s%n",this.getCantor());
+        System.out.println("Esse album foi lançado em " + this.dataLancamento);
     }
 
     public LocalDate getDataLancamento() {
@@ -60,13 +37,5 @@ public class Album {
 
     public void setQtdFaixas(Integer qtdFaixas) {
         this.qtdFaixas = qtdFaixas;
-    }
-
-    public String getCantor() {
-        return cantor;
-    }
-
-    public void setCantor(String cantor) {
-        this.cantor = cantor;
     }
 }
