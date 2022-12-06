@@ -37,6 +37,16 @@ public class Musica extends Cadastro{
         System.out.printf("Nota............:%s%n",this.getNota());
     }
 
+    @Override
+    public String toString() {
+        return  String.format("\nID...............:%s\n",this.getId()) +
+                String.format("Nome da musica...:%s\n",this.getNome()) +
+                String.format("Genero...........:%s\n",this.getGenero())+
+                String.format("Cantor...........:%s\n",this.getCantor())+
+                String.format("Duração..........:%s\n",getTempo())+
+                String.format("Nota.............:%s\n",this.getNota());
+    }
+
     public String getDescricao() {
         return descricao;
     }

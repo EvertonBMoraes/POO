@@ -8,17 +8,22 @@ public class Main {
 
         //Devs Everton Moraes e Henrique Schneider
         /*
-        - Criar array(playlists e/ou albuns) e inserir as músicas
+        - Criar array(playlists e/ou albuns) e inserir as músicas -- ok
         - LocalDate em datas --- ok
         - LocalTime no tempo de duração musicas/albuns --- músicas ok
-        - Qtd faixas no album
-        - Comparar tempo de duas musicas (comparable)
-        - Comparar qtd de faixas em dois albuns (comparable)
-        - Implementar Scanner para escolher album e mostrar info musicas
-        - Classe super/pai (herança), classe abstrada e/ou  interface
-        - Sobrecarga e sobrescrita  (de métodos e construtores)
-        - Collections (List ou Set);
-        - Exceptions (RuntimeException e personalizadas).
+        - Classe super/pai (herança), classe abstrada e/ou  interface --- ok
+        - Sobrecarga e sobrescrita  (de métodos e construtores) --- ok
+        - Qtd faixas na playlist -- ok
+        - Collections (List ou Set) --- ok
+
+                                PENDENTE
+        - Comparar nota de duas musicas (comparable) - Henrique
+        - Implementar Scanner para escolher a playlist para imprimir (Scanner) -- Henrique
+        - Exceptions (RuntimeException e personalizadas). -- Everton
+
+        - Atualizar UML(diagrama) e descritivo do problema - Everton
+        - Revisão - Everton,
+        - Comentários - EVerton
          */
 
 
@@ -45,17 +50,24 @@ public class Main {
         Cantor artista02 = new Cantor("Abel Makkonen Tesfaye", "The Weeknd",LocalDate.of(1990,2,16),"Abel Makkonen Tesfaye, mais conhecido por seu nome artístico the Weeknd, é um cantor, compositor, ator e produtor musical canadense. Ele ajudou a expandir a paleta musical do R&B, ao incorporar influências indie e de música eletrônica; seu trabalho é classificado como R&B alternativo.",10002);
         Cantor artista03 = new Cantor("Peter Gene Hernandez", "Bruno Mars",LocalDate.of(1985,10,8),"Peter Gene Hernandez, mais conhecido pelo nome artístico Bruno Mars é um cantor, compositor, produtor musical, dançarino e multi-instrumentista americano, nascido e criado no Havaí. ",10003);
 
-        Album disco01 = new Album(10001,"Thriller", "Michael Jackson","Pop",LocalDate.of(1982,11,30),9,);
-        Album disco02 = new Album(10002,"After Hours", "The Weeknd","R&B",LocalDate.of(2020,03,20),14,);
-        Album disco03 = new Album(10003,"24K Magic","Bruno Mars","Pop",LocalDate.of(2016,11,17),9,);
+        Album disco01 = new Album(10001,"Thriller", "Michael Jackson","Pop",LocalTime.of(0,42,21),9.6,LocalDate.of(1982,11,30),9);
+        Album disco02 = new Album(10002,"After Hours", "The Weeknd","R&B",LocalTime.of(0,56,17),8.5,LocalDate.of(2020,03,20),14);
+        Album disco03 = new Album(10003,"24K Magic","Bruno Mars","Pop",LocalTime.of(0,33,32),8.8,LocalDate.of(2016,11,17),9);
 
         Filme pelicula01 = new Filme("MoonWalker",1988,"Musical","Bad");
         Filme pelicula02 = new Filme("O Guarda Costas",1992,"Drama Romântico","I Will Always love You");
         Filme pelicula03 = new Filme("Baby Drive",2017,"Ação","Let's Go Away for Awhile");
 
+        Playlist playlist01 = new Playlist("musicasMJ");
+        playlist01.addMusica(track01);
+        playlist01.addMusica(track02);
+        playlist01.addMusica(track03);
+        playlist01.addMusica(track04);
+        playlist01.addMusica(track05);
+
+        System.out.println(playlist01);
+
         track01.info();
-        track03.info();
-        track10.info();
         track12.info();
         track14.info();
 
