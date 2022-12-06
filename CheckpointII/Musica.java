@@ -1,9 +1,8 @@
 package CheckpointII;
 
 import java.time.LocalTime;
-import java.util.Scanner;
 
-public class Musica extends Cadastro{
+public class Musica extends Cadastro implements Comparable<Musica> {
 
     private String descricao;
 
@@ -50,6 +49,20 @@ public class Musica extends Cadastro{
                 String.format("Cantor...........:%s\n",this.getCantor())+
                 String.format("Duração..........:%s\n",getTempo())+
                 String.format("Nota.............:%s\n",this.getNota());
+    }
+    @Override
+    public int compareTo(Musica o){
+        System.out.println("\n____________Comparador de Notas________________");
+        if(o.getNota() == this.getNota()){
+            System.out.println("As notas das duas músicas são iguais!");
+            return 0;
+        } else if (o.getNota() < this.getNota()){
+            System.out.println("A nota da música " + o.getNome() + " é menor!");
+            return -1;
+        } else {
+            System.out.println("A nota da música " + o.getNome() + " é maior!");
+            return  1;
+        }
     }
 
     public String getDescricao() {

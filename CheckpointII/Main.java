@@ -16,12 +16,11 @@ public class Main {
         - Sobrecarga e sobrescrita  (de métodos e construtores) --- ok
         - Qtd faixas na playlist -- ok
         - Collections (List ou Set) --- ok
+        - Comparar nota de duas musicas (comparable) - ok
+        - scanner alterar nota -- ok
+        - Exceptions (RuntimeException e personalizadas). -- ok
 
                                 PENDENTE
-        - Comparar nota de duas musicas (comparable) - Henrique
-        - Implementar Scanner para escolher a playlist para imprimir (Scanner) -- Henrique
-        - Exceptions (RuntimeException e personalizadas). -- Everton
-
         - Atualizar UML(diagrama) e descritivo do problema - Everton
         - Revisão - Everton,
         - Comentários - EVerton
@@ -34,7 +33,7 @@ public class Main {
         Musica track01 = new Musica(10001,"Wanna Be Starlin'Somethin'","Pop","Michael Jackson", LocalTime.of(0,6,0),7.9);
         Musica track02 = new Musica(10002,"Baby Be Mine","Pop","Michael Jackson",LocalTime.of(0,4,20),8.8);
         Musica track03 = new Musica(10003,"The Girl Is Mine","Pop","Michael Jackson",LocalTime.of(0,3,40),8.5);
-        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.8,"Foi e ainda é um fenômeno no mundo todo, tanto pelo enredo incrível, quanto pela coreografia espetacular, impactante e cativante. O sucesso do clipe é tanto que permanece até hoje. ");
+        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.9,"Foi e ainda é um fenômeno no mundo todo, tanto pelo enredo incrível, quanto pela coreografia espetacular, impactante e cativante. O sucesso do clipe é tanto que permanece até hoje. ");
         Musica track05 = new Musica(10005,"Beat It","Pop","Michael Jackson",LocalTime.of(0,4,18),9.9);
         Musica track06 = new Musica(10006,"Billie Jean","Pop","Michael Jackson",LocalTime.of(0,4,53),9.5,"Originalmente reprovada pelo então produtor de Jackson, Quincy Jones, a faixa quase foi retirada do álbum depois que ele e Jackson tiveram discordâncias quanto a isso. ");
         Musica track07 = new Musica(10007,"Human Nature","Pop","Michael Jackson",LocalTime.of(0,4,5),7.0);
@@ -74,25 +73,10 @@ public class Main {
         musicasBn.addMusica(track14);
         musicasBn.addMusica(track13);
 
-        System.out.println(musicasMj);
-        System.out.println(musicasTw);
-        System.out.println(musicasBn);
-
         track01.info();
         track13.info();
 
-        Scanner novaNotaMúsica = new Scanner(System.in);
-        // String nomeMusica;
-        Double novaNota;
-        // System.out.println("Digite uma faixa válida para música:");
-        // nomeMusica = novaNotaMúsica.nextLine();
-        System.out.println("Insira uma nova nota para a música(valores entre 0.0 e 10.0):");
-        novaNota = novaNotaMúsica.nextDouble();
-        try {
-           track06.modificarNota(novaNota);
-        } catch (Erros e) {
-            System.err.println(e.getMessage());
-        }
+        System.out.println(musicasMj);
 
         artista01.mudarNomeArtistico("MJ");
 
@@ -100,6 +84,17 @@ public class Main {
 
         pelicula02.exibirMusicaFilme();
 
+        track03.compareTo(track02);
+
+        Scanner novaNotaMúsica = new Scanner(System.in);
+        Double novaNota;
         System.out.println("____________________________");
+        System.out.println("Insira uma nova nota para a música(valores entre 0.0 e 10.0):");
+        novaNota = novaNotaMúsica.nextDouble();
+        try {
+           track06.modificarNota(novaNota);
+        } catch (Erros e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
