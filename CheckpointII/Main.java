@@ -82,11 +82,14 @@ public class Main {
         track13.info();
 
         Scanner novaNotaMúsica = new Scanner(System.in);
-        Double nt;
+        // String nomeMusica;
+        Double novaNota;
+        // System.out.println("Digite uma faixa válida para música:");
+        // nomeMusica = novaNotaMúsica.nextLine();
         System.out.println("Insira uma nova nota para a música(valores entre 0.0 e 10.0):");
-        nt = novaNotaMúsica.nextDouble();
+        novaNota = novaNotaMúsica.nextDouble();
         try {
-            track07.modificarNota(nt);
+           track06.modificarNota(novaNota);
         } catch (Erros e) {
             System.err.println(e.getMessage());
         }
