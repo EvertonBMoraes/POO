@@ -1,6 +1,7 @@
 package CheckpointII;
 
 import java.time.LocalTime;
+import java.util.Scanner;
 
 public class Musica extends Cadastro{
 
@@ -15,9 +16,13 @@ public class Musica extends Cadastro{
         this.descricao = descricao;
     }
 
-    public void modificarNota(Double nota){
+
+    public void modificarNota(Double nota)throws Erros {
+        System.out.println("____________________________\n");
+        if( nota < 0 ||nota > 10 ){
+            throw new Erros("O valor '"+ nota + "' não é valido!! Insira uma nota com uma casa decimal entre os valores de 0.0 e 10.0");
+        }
         System.out.println(
-                "____________________________\n" +
                     "Música " + this.getNome() +
                         "\nNota anterior: " + this.getNota());
         this.setNota(nota);

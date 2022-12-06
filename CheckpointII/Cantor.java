@@ -18,7 +18,7 @@ public class Cantor {
         this.numeroRegistro = numeroRegistro;
     }
 
-    public void mudarNomeArtistico(String nomeArtistico){
+    public void mudarNomeArtistico(String nomeArtistico) {
         System.out.println(
                 "____________________________\n" +
                         "Nome artístico anterior: " + this.getNomeArtistico());

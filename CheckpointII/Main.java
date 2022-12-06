@@ -2,6 +2,7 @@ package CheckpointII;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -80,7 +81,15 @@ public class Main {
         track01.info();
         track13.info();
 
-        track07.modificarNota(8.5);
+        Scanner novaNotaMúsica = new Scanner(System.in);
+        Double nt;
+        System.out.println("Insira uma nova nota para a música(valores entre 0.0 e 10.0):");
+        nt = novaNotaMúsica.nextDouble();
+        try {
+            track07.modificarNota(nt);
+        } catch (Erros e) {
+            System.err.println(e.getMessage());
+        }
 
         artista01.mudarNomeArtistico("MJ");
 
