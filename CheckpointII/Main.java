@@ -8,7 +8,7 @@ public class Main {
 
         //Devs Everton Moraes e Henrique Schneider
         /*
-        - Criar array(playlists e/ou albuns) e inserir as músicas -- ok
+        - Criar array(playlists) e inserir as músicas -- ok
         - LocalDate em datas --- ok
         - LocalTime no tempo de duração musicas/albuns --- músicas ok
         - Classe super/pai (herança), classe abstrada e/ou  interface --- ok
@@ -26,7 +26,6 @@ public class Main {
         - Comentários - EVerton
          */
 
-
         System.out.println("____________________________\n" +
                 "Programação Orientada a Objetos - Checkpoint I\n" +
                 "Por Everton Moraes e Henrique Schneider");
@@ -34,9 +33,9 @@ public class Main {
         Musica track01 = new Musica(10001,"Wanna Be Starlin'Somethin'","Pop","Michael Jackson", LocalTime.of(0,6,0),7.9);
         Musica track02 = new Musica(10002,"Baby Be Mine","Pop","Michael Jackson",LocalTime.of(0,4,20),8.8);
         Musica track03 = new Musica(10003,"The Girl Is Mine","Pop","Michael Jackson",LocalTime.of(0,3,40),8.5);
-        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.8);
+        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.8,"Foi e ainda é um fenômeno no mundo todo, tanto pelo enredo incrível, quanto pela coreografia espetacular, impactante e cativante. O sucesso do clipe é tanto que permanece até hoje. ");
         Musica track05 = new Musica(10005,"Beat It","Pop","Michael Jackson",LocalTime.of(0,4,18),9.9);
-        Musica track06 = new Musica(10006,"Billie Jean","Pop","Michael Jackson",LocalTime.of(0,4,53),9.5);
+        Musica track06 = new Musica(10006,"Billie Jean","Pop","Michael Jackson",LocalTime.of(0,4,53),9.5,"Originalmente reprovada pelo então produtor de Jackson, Quincy Jones, a faixa quase foi retirada do álbum depois que ele e Jackson tiveram discordâncias quanto a isso. ");
         Musica track07 = new Musica(10007,"Human Nature","Pop","Michael Jackson",LocalTime.of(0,4,5),7.0);
         Musica track08 = new Musica(10008,"P.Y.T","Pop","Michael Jackson",LocalTime.of(0,3,58),6.7);
         Musica track09 = new Musica(10009,"The Lady in My Life","Pop","Michael Jackson",LocalTime.of(0,4,58),7.9);
@@ -58,18 +57,28 @@ public class Main {
         Filme pelicula02 = new Filme("O Guarda Costas",1992,"Drama Romântico","I Will Always love You");
         Filme pelicula03 = new Filme("Baby Drive",2017,"Ação","Let's Go Away for Awhile");
 
-        Playlist playlist01 = new Playlist("musicasMJ");
-        playlist01.addMusica(track01);
-        playlist01.addMusica(track02);
-        playlist01.addMusica(track03);
-        playlist01.addMusica(track04);
-        playlist01.addMusica(track05);
+        Playlist musicasMj = new Playlist("musicasMj");
+        musicasMj.addMusica(track01);
+        musicasMj.addMusica(track02);
+        musicasMj.addMusica(track03);
+        musicasMj.addMusica(track04);
+        musicasMj.addMusica(track05);
 
-        System.out.println(playlist01);
+        Playlist musicasTw = new Playlist("musicasTw");
+        musicasTw.addMusica(track10);
+        musicasTw.addMusica(track11);
+        musicasTw.addMusica(track12);
+
+        Playlist musicasBn = new Playlist("musicasBn");
+        musicasBn.addMusica(track14);
+        musicasBn.addMusica(track13);
+
+        System.out.println(musicasMj);
+        System.out.println(musicasTw);
+        System.out.println(musicasBn);
 
         track01.info();
-        track12.info();
-        track14.info();
+        track13.info();
 
         track07.modificarNota(8.5);
 
