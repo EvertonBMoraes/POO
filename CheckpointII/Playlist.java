@@ -1,8 +1,9 @@
 package CheckpointII;
 
 import java.time.Duration;
-import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Playlist {
     private String nome;
@@ -13,9 +14,6 @@ public class Playlist {
         this.nome = nome;
         this.playlist = new ArrayList<>();
     }
-
-
-
 
 
     public void addMusica(Musica musica) {
@@ -65,10 +63,9 @@ public class Playlist {
     public static void dadosPlaylist() {
         Scanner sc = new Scanner(System.in);
         Playlist playlist;
-        Musica musica;
+
         List<Playlist> novaPlaylist = new ArrayList<>();
-        Objects musica2 = null;
-        ArrayList<Musica> musicaArrayList = new ArrayList<>();
+
         int opcao = 0;
 
 
