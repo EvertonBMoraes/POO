@@ -2,10 +2,7 @@ package CheckpointII;
 
 public class Erros extends  Exception{
 
-    public Erros()
-    {
-        super();
-    }
+
     public Erros(String mensagem)
     {
         super(mensagem);

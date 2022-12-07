@@ -1,6 +1,8 @@
 package CheckpointII;
 
 import java.time.LocalTime;
+import java.util.Objects;
+
 
 public class Musica extends Cadastro implements Comparable<Musica> {
 
@@ -27,7 +29,7 @@ public class Musica extends Cadastro implements Comparable<Musica> {
         this.setNota(nota);
         System.out.println("Nova nota atribuída: "
                 + this.getNota());
-    };
+    }
 
     @Override
     public void info(){
@@ -53,7 +55,7 @@ public class Musica extends Cadastro implements Comparable<Musica> {
     @Override
     public int compareTo(Musica o){
         System.out.println("\n____________Comparador de Notas________________");
-        if(o.getNota() == this.getNota()){
+        if(Objects.equals(o.getNota(), this.getNota())){
             System.out.println("As notas das duas músicas são iguais!");
             return 0;
         } else if (o.getNota() < this.getNota()){
@@ -65,11 +67,11 @@ public class Musica extends Cadastro implements Comparable<Musica> {
         }
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
+
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+
 }
