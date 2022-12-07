@@ -33,12 +33,12 @@ public class Main {
         Musica track01 = new Musica(10001,"Wanna Be Starlin'Somethin'","Pop","Michael Jackson", LocalTime.of(0,6,0),7.9);
         Musica track02 = new Musica(10002,"Baby Be Mine","Pop","Michael Jackson",LocalTime.of(0,4,20),8.8);
         Musica track03 = new Musica(10003,"The Girl Is Mine","Pop","Michael Jackson",LocalTime.of(0,3,40),8.5);
-        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.9,"Foi e ainda é um fenômeno no mundo todo, tanto pelo enredo incrível, quanto pela coreografia espetacular, impactante e cativante. O sucesso do clipe é tanto que permanece até hoje. ");
+        Musica track04 = new Musica(10004,"Thriller'","Pop","Michael Jackson",LocalTime.of(0,5,57),9.7,"Foi e ainda é um fenômeno no mundo todo, tanto pelo enredo incrível, quanto pela coreografia espetacular, impactante e cativante. O sucesso do clipe é tanto que permanece até hoje. ");
         Musica track05 = new Musica(10005,"Beat It","Pop","Michael Jackson",LocalTime.of(0,4,18),9.9);
         Musica track06 = new Musica(10006,"Billie Jean","Pop","Michael Jackson",LocalTime.of(0,4,53),9.5,"Originalmente reprovada pelo então produtor de Jackson, Quincy Jones, a faixa quase foi retirada do álbum depois que ele e Jackson tiveram discordâncias quanto a isso. ");
         Musica track07 = new Musica(10007,"Human Nature","Pop","Michael Jackson",LocalTime.of(0,4,5),7.0);
         Musica track08 = new Musica(10008,"P.Y.T","Pop","Michael Jackson",LocalTime.of(0,3,58),6.7);
-        Musica track09 = new Musica(10009,"The Lady in My Life","Pop","Michael Jackson",LocalTime.of(0,4,58),7.9);
+        Musica track09 = new Musica(10009,"The Lady in My Life","Pop","Michael Jackson",LocalTime.of(0,4,58),7.1);
         Musica track10 = new Musica(10010,"After Hours","R&B","The Weeknd",LocalTime.of(0,4,1),7.9);
         Musica track11 = new Musica(10011,"Save Your Tears","R&B","The Weeknd",LocalTime.of(0,4,35),7.5);
         Musica track12 = new Musica(10012,"Blinding Lights","R&B","The Weeknd",LocalTime.of(0,4,20),8.5);
@@ -84,7 +84,7 @@ public class Main {
 
         pelicula02.exibirMusicaFilme();
 
-        track03.compareTo(track02);
+        track01.compareTo(track02);
 
         Scanner novaNotaMúsica = new Scanner(System.in);
         Double novaNota;
