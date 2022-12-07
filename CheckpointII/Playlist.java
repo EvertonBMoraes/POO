@@ -96,13 +96,13 @@ public class Playlist {
                 } else {
                     System.out.println(novaPlaylist.toString());
 
-                    System.out.println("Pressione um tecla para continuar.");
+                    System.out.println("Pressione uma tecla para continuar.");
                     sc.nextLine();
                 }
             }
         } while (opcao != 0);
 
-        sc.close();
+        return;
     }
 }
 
