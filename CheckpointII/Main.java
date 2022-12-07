@@ -86,6 +86,11 @@ public class Main {
 
         track01.compareTo(track02);
 
+
+        Playlist.dadosPlaylist(); //Scanner para Criar playlist
+
+
+
         Scanner novaNotaMúsica = new Scanner(System.in);
         Double novaNota;
         System.out.println("____________________________");
@@ -96,5 +101,9 @@ public class Main {
         } catch (Erros e) {
             System.err.println(e.getMessage());
         }
+
+
+
+
     }
 }
