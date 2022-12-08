@@ -7,27 +7,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Devs Everton Moraes e Henrique Schneider
-        /*
-        - Criar array(playlists) e inserir as músicas -- ok
-        - LocalDate em datas --- ok
-        - LocalTime no tempo de duração musicas/albuns --- músicas ok
-        - Classe super/pai (herança), classe abstrada e/ou  interface --- ok
-        - Sobrecarga e sobrescrita  (de métodos e construtores) --- ok
-        - Qtd faixas na playlist -- ok
-        - Collections (List ou Set) --- ok
-        - Comparar nota de duas musicas (comparable) - ok
-        - scanner alterar nota -- ok
-        - Exceptions (RuntimeException e personalizadas). -- ok
-
-                                PENDENTE
-        - Atualizar UML(diagrama) e descritivo do problema - Everton
-        - Revisão - Everton,
-        - Comentários - EVerton
-         */
-
         System.out.println("____________________________\n" +
-                "Programação Orientada a Objetos - Checkpoint I\n" +
+                "Programação Orientada a Objetos - Checkpoint II\n" +
                 "Por Everton Moraes e Henrique Schneider");
 
         Musica track01 = new Musica(10001,"Wanna Be Starlin'Somethin'","Pop","Michael Jackson", LocalTime.of(0,6,0),7.9);
@@ -73,22 +54,22 @@ public class Main {
         musicasBn.addMusica(track14);
         musicasBn.addMusica(track13);
 
-        track01.info();
-        track13.info();
+        track01.info(); // exibe informações sobre a música selecionada
+        track13.info(); // exibe informações sobre a música selecionada
 
-        System.out.println(musicasMj);
+        System.out.println(musicasMj); // imprime uma playlist existente
 
-        artista01.mudarNomeArtistico("MJ");
+        artista01.mudarNomeArtistico("MJ"); // alterar o nome artístico
 
-        disco02.info();
+        disco02.info(); // exibe informações sobre o disco selecionado
 
-        pelicula02.exibirMusicaFilme();
+        pelicula02.exibirMusicaFilme(); // exibe uma música que toca no filme selecionado
 
-        track01.compareTo(track02);
+        track01.compareTo(track02); // compara as notas de duas músicas
 
         Playlist.dadosPlaylist(); //Scanner para Criar playlist
 
-        Scanner novaNotaMúsica = new Scanner(System.in);
+        Scanner novaNotaMúsica = new Scanner(System.in); // altera a nota de uma música informada pelo usuário, no intervalo entre 0.0 e 10.0
         Double novaNota;
         System.out.println("____________________________");
         System.out.println("Insira uma nova nota para a música(valores entre 0.0 e 10.0):");
